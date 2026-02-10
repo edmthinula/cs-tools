@@ -20,6 +20,7 @@ public type AppConfig record {|
     string sampleAppConfig;
 |};
 
+# Represent a customer contact.
 public type ContactDetail record {|
     # CRM id
     string id?;
