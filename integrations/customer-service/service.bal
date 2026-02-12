@@ -61,7 +61,7 @@ service / on new http:Listener(9090) {
     #
     # + email - Contact email
     # + return - Contact | InternalServerError | NotFound
-    resource function get contacts/[entity:EmailString email]() returns Contact|http:InternalServerError|http:NotFound {
+    resource function get contacts/[entity:EmailString email]() returns Contact|http:NotFound|http:InternalServerError {
         entity:ContactSearchPayload filter = {
             email: email
         };
