@@ -16,7 +16,7 @@
 import ballerina/constraint;
 # Email Constraint.
 @constraint:String {
-    minLength: 1,
+    minLength: 6,
     pattern: re `^[A-Za-z0-9]+([._%+-]?[A-Za-z0-9]+)*@[A-Za-z0-9]+([.-]?[A-Za-z0-9]+)*\.[A-Za-z]{2,}$`
 
 }
