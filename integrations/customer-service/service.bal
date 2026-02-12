@@ -65,7 +65,7 @@ service / on new http:Listener(9090) {
     # + return - Contact | InternalServerError | BadRequest
     resource function post contacts/find(entity:ContactSearchPayload filter) returns http:Ok|http:InternalServerError|http:BadRequest {
         if filter.email !is string {
-            log:printError(ERR_MSG_CONTACTS_BAD_REQUEST);
+            log:printWarn(ERR_MSG_CONTACTS_BAD_REQUEST);
             return <http:BadRequest>{
                 body: {
                     message: ERR_MSG_CONTACTS_BAD_REQUEST
